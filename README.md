@@ -1,4 +1,4 @@
-# 🤖 Bellande Internal Sensor Mobile iOS Api Package
+# 🤖 Bellande External Sensor Mobile iOS Api Package
 
 # Benifits of Using the Bellande API's
 - Works in any framework
@@ -8,26 +8,6 @@
 # Check Website All Information And Accessibility
 - [![Organization Website](https://img.shields.io/badge/Explore%20Our-Website-0099cc?style=for-the-badge)](https://robotics-sensors.github.io)
 - Checkout our research organization for information, information on this repository is limited as well as all the configs are demos
-
-### Importing Package Into Your Application
-**Package.swift**
-```
-dependencies: [
-  .package(url: "https://github.com/Application-UI-UX/bellande_internal_sensor_mobile_ios_api.git", .branch("main"))
-]
-
-targets: [
-  .target(
-    name: "YourProjectApplicationName",
-      dependencies: [
-        .product(name: "bellande_internal_sensor_mobile_ios_api", package: "bellande_internal_sensor_mobile_ios_api")
-      ])
-]
-```
-**Your Project Application Name**
-```
-import bellande_internal_sensor_mobile_ios_api
-```
 
 ### 🔑 API USE
 - Each Bellande APi has there unique endpoint
@@ -51,11 +31,11 @@ The Bellande Algorithms Web ROS/ROS2 API serves as a gateway to utilize the soph
 The primary functionality of this API is to provide access to Bellande Algorithms. It acts as an intermediary, enabling communication between your application and Bellande's advanced algorithms. Whether you're working with ROS or ROS2, this API facilitates the utilization of Bellande's cutting-edge solutions in your robotic projects.
 
 ## 🐳 API
-- [![Bellande Step](https://img.shields.io/badge/Bellande%20API-Bellande%20Step-0099cc?style=for-the-badge)](https://github.com/Robotics-Sensors/bellande_robots_ram_usage)
+- [![Bellande Step](https://img.shields.io/badge/Bellande%20API-Bellande%20Step-0099cc?style=for-the-badge)](https://github.com/Robotics-Sensors/bellande_robots_lidar)
 - [![Bellande Search Path](https://img.shields.io/badge/Bellande%20API-Bellande%20Search%20Path-0099cc?style=for-the-badge)](https://github.com/Robotics-Sensors/bellande_search_path)
 - [![Bellande Alternate Path Creation](https://img.shields.io/badge/Bellande%20API-Bellande%20Alternate%20Path%20Creation-0099cc?style=for-the-badge)](https://github.com/Robotics-Sensors/bellande_adaptive_alternate_path_creation)
 - [![Bellande Motion Probabilistic](https://img.shields.io/badge/Bellande%20API-Bellande%20Motion%20Probabilistic-0099cc?style=for-the-badge)](https://github.com/Robotics-Sensors/bellande_motion_probabilistic)
-- [![Bellande Computer Vision 2d](https://img.shields.io/badge/Bellande%20API-Bellande%20Computer%20Vision%202D-0099cc?style=for-the-badge)](https://github.com/Robotics-Sensors/bellande_network_usage)
+- [![Bellande Computer Vision 2d](https://img.shields.io/badge/Bellande%20API-Bellande%20Computer%20Vision%202D-0099cc?style=for-the-badge)](https://github.com/Robotics-Sensors/bellande_gps)
 
 ## 💨 Bellande Model Format API/Application & Bellande Framework
 - [![Bellande Model Format](https://img.shields.io/badge/Bellande%20Model%20Format-0099cc?style=for-the-badge)](https://github.com/Artificial-Intelligence-Computer-Vision/bellande_model_format)

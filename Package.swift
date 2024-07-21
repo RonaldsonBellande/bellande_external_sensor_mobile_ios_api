@@ -18,55 +18,32 @@
 import PackageDescription
 
 let package = Package(
-    name: "bellande_internal_sensors_mobile_ios_api",
+    name: "bellande_external_sensors_mobile_ios_api",
     platforms: [
         .iOS(.v13)
     ],
     products: [
         .library(
-            name: "bellande_cpu_temperature",
-            targets: ["bellande_cpu_temperature"]),
+            name: "bellande_camera",
+            targets: ["bellande_camera"]),
         .library(
-            name: "bellande_cpu_usage",
-            targets: ["bellande_cpu_usage"]),
+            name: "bellande_gps",
+            targets: ["bellande_gps"]),
         .library(
-            name: "bellande_internal_temperature",
-            targets: ["bellande_internal_temperature"]),
+            name: "bellande_lidar",
+            targets: ["bellande_lidar"]),
         .library(
-            name: "bellande_battery_usage",
-            targets: ["bellande_battery_usage"]),
-        .library(
-            name: "bellande_battery_temperature",
-            targets: ["bellande_battery_temperature"]),
-        .library(
-            name: "bellande_network_usage",
-            targets: ["bellande_network_usage"]),
-        .library(
-            name: "bellande_ram_usage",
-            targets: ["bellande_ram_usage"]),
-        .library(
-            name: "bellande_storage_usage",
-            targets: ["bellande_storage_usage"]),
-        .library(
-            name: "bellande_cpu_temperature",
-            targets: ["bellande_cpu_temperature"]),
-        .library(
-            name: "bellande_gpu_usage",
-            targets: ["bellande_gpu_usage"]),
+            name: "bellande_radar",
+            targets: ["bellande_radar"]),
 
-
-
-        .library(
-            name: "bellande_device_motion",
-            targets: ["bellande_device_motion"]),
     ],
     dependencies: [
     ],
     targets: [
         .target(
-            name: "bellande_cpu_temperature",
+            name: "bellande_camera",
             dependencies: [],
-            path: "Source/bellande_cpu_temperature",
+            path: "Source/bellande_camera",
             exclude: ["config"],
             sources: ["src"],
             resources: [
@@ -74,14 +51,14 @@ let package = Package(
             ]
         ),
         .testTarget(
-            name: "bellande_cpu_temperature_tests",
-            dependencies: ["bellande_cpu_temperature"]),
+            name: "bellande_camera_tests",
+            dependencies: ["bellande_camera"]),
        
 
         .target(
-            name: "bellande_cpu_usage",
+            name: "bellande_gps",
             dependencies: [],
-            path: "Source/bellande_cpu_usage",
+            path: "Source/bellande_gps",
             exclude: ["config"],
             sources: ["src"],
             resources: [
@@ -89,14 +66,14 @@ let package = Package(
             ]
         ),
         .testTarget(
-            name: "bellande_cpu_usage_tests",
-            dependencies: ["bellande_cpu_usage"]),
+            name: "bellande_gps_tests",
+            dependencies: ["bellande_gps"]),
 
 
         .target(
-            name: "bellande_internal_temperature",
+            name: "bellande_lidar",
             dependencies: [],
-            path: "Source/bellande_internal_temperature",
+            path: "Source/bellande_lidar",
             exclude: ["config"],
             sources: ["src"],
             resources: [
@@ -104,14 +81,14 @@ let package = Package(
             ]
         ),
         .testTarget(
-            name: "bellande_internal_temperature_tests",
-            dependencies: ["bellande_internal_temperature"]),
+            name: "bellande_lidar_tests",
+            dependencies: ["bellande_lidar"]),
 
 
         .target(
-            name: "bellande_battery_usage",
+            name: "bellande_radar",
             dependencies: [],
-            path: "Source/bellande_battery_usage",
+            path: "Source/bellande_radar",
             exclude: ["config"],
             sources: ["src"],
             resources: [
@@ -119,105 +96,8 @@ let package = Package(
             ]
         ),
         .testTarget(
-            name: "bellande_battery_usage_tests",
-            dependencies: ["bellande_battery_usage"]),
-       
+            name: "bellande_radar_tests",
+            dependencies: ["bellande_radar"]),
 
-        .target(
-            name: "bellande_battery_temperature",
-            dependencies: [],
-            path: "Source/bellande_battery_temperature",
-            exclude: ["config"],
-            sources: ["src"],
-            resources: [
-                .copy("configs.json")
-            ]
-        ),
-        .testTarget(
-            name: "bellande_battery_temperature_tests",
-            dependencies: ["bellande_battery_temperature"]),
-
-
-        .target(
-            name: "bellande_network_usage",
-            dependencies: [],
-            path: "Source/bellande_network_usage",
-            exclude: ["config"],
-            sources: ["src"],
-            resources: [
-                .copy("configs.json")
-            ]
-        ),
-        .testTarget(
-            name: "bellande_network_usage_tests",
-            dependencies: ["bellande_network_usage"]),
-
-
-        .target(
-            name: "bellande_ram_usage",
-            dependencies: [],
-            path: "Source/bellande_ram_usage",
-            exclude: ["config"],
-            sources: ["src"],
-            resources: [
-                .copy("configs.json")
-            ]
-        ),
-        .testTarget(
-            name: "bellande_ram_usage_tests",
-            dependencies: ["bellande_ram_usage"]),
-
-
-        .target(
-            name: "bellande_storage_usage",
-            dependencies: [],
-            path: "Source/bellande_storage_usage",
-            exclude: ["config"],
-            sources: ["src"],
-            resources: [
-                .copy("configs.json")
-            ]
-        ),
-        .testTarget(
-            name: "bellande_storage_usage_tests",
-            dependencies: ["bellande_storage_usage"]),
-
-
-        .target(
-            name: "bellande_gpu_temperature",
-            dependencies: [],
-            path: "Source/bellande_gpu_temperature",
-            exclude: ["config"],
-            sources: ["src"],
-            resources: [
-                .copy("configs.json")
-            ]
-        ),
-        .testTarget(
-            name: "bellande_gpu_temperature_tests",
-            dependencies: ["bellande_gpu_temperature"]),
-       
-
-        .target(
-            name: "bellande_gpu_usage",
-            dependencies: [],
-            path: "Source/bellande_gpu_usage",
-            exclude: ["config"],
-            sources: ["src"],
-            resources: [
-                .copy("configs.json")
-            ]
-        ),
-        .testTarget(
-            name: "bellande_gpu_usage_tests",
-            dependencies: ["bellande_gpu_usage"]),
-
-
-        .target(
-            name: "bellande_device_motion",
-            dependencies: []),
-        .testTarget(
-            name: "bellande_device_motion_tests",
-            dependencies: ["bellande_device_motion"]),
     ]
 )

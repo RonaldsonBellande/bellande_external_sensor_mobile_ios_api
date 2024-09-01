@@ -29,8 +29,7 @@ public class bellande_lidar_activity: NSObject, ARSessionDelegate {
         }
         
         guard let apiUrl = config["url"] as? String,
-              let endpointPaths = config["endpoint_path"] as? [String: String],
-              let lidarEndpoint = endpointPaths["lidar"],
+              let lidarEndpoint = config["endpoint_path"] as? [String: String],
               let apiAccessKey = config["Bellande_Framework_Access_Key"] as? String,
               let connectivityPasscode = config["connectivity_passcode"] as? String else {
             fatalError("Invalid configuration format")

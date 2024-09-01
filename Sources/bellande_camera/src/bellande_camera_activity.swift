@@ -33,8 +33,7 @@ public class bellande_camera_activity: NSObject, AVCaptureVideoDataOutputSampleB
         }
         
         guard let apiUrl = config["url"] as? String,
-              let endpointPaths = config["endpoint_path"] as? [String: String],
-              let streamEndpoint = endpointPaths["stream"],
+              let streamEndpoint = config["endpoint_path"] as? [String: String],
               let apiAccessKey = config["Bellande_Framework_Access_Key"] as? String,
               let connectivityPasscode = config["connectivity_passcode"] as? String else {
             fatalError("Invalid configuration format")
